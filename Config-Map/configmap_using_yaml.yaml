@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: myconfigmap
+  
+data:
+  abhay.conf: | 
+   Listen 1234
+   x 5 
+   y 10

@@ -1,0 +1,17 @@
+apiVersion: v1
+kind: Pod 
+metadata:
+  name: config-map-demo-pod
+spec:
+  containers:
+    - name: demo 
+      image:  "vimal13/apache-webserver-php"
+
+      volumeMounts:
+        - name:  mycm
+          mountPath:  /etc/httpd/conf.d/
+
+  volumes:
+  - configMap:
+      name: mywebcm
+    name:  mycm
